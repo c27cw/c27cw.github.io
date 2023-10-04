@@ -52,11 +52,11 @@
 		Welcome To My Website!
 	</h1>
 
-	<a href = "projects.html">
-	</a>
-	<!-- </a> -->
+	<a id="boxLink">
+	
 
  	<div id = "cardboard"></div> 
+ </a>
 
 	
 	<script>
@@ -79,11 +79,20 @@
 
 
 <script type="text/javascript">
+
+	function addHref (){
+		boxLink.href="projects.html"
+
+	}
 	
 	cardboard.addEventListener("click", function(){
 		console.log("hello?")
-		cardboard.style.backgroundImage="url(opening.gif)"
+		cardboard.style.backgroundImage="url(opening.gif)";
+		setTimeout(addHref, 1000)
+
+
 		})
 </script>
+
 </body>
 </html>

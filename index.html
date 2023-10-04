@@ -3,15 +3,23 @@
 <head>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 
 	<style type="text/css">
-		#dog{
+		#cardboard{
 			width:200px;
-			height:200px;
-			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXugTIueANr5VIU98I0Fz3X5sK5GE0nxF3yA&usqp=CAU);
-			backround size: contain;
+			height: 150px;
+			background-image:url(cardboard.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#cardboard2{
+			width:200px;
+			height: 150px;
+			background-image:url(cardboardframimimation.gif);
+			background-size: contain;
 			background-repeat: no-repeat;
 		}
 
@@ -32,24 +40,36 @@
 	</style>
 </head>
 <body>
-<h1>
-	Pick your dream pet
-</h1>
+	<h1>
+		Welcome To My Website!
+	</h1>
 
-<a href= "projects.html">
-	<div id = "dog">
-	</div>
+	<a href = "projects.html">
+	</a>
+	<!-- </a> -->
 
-</a>
+ 	<div id = "cardboard"; onclick = "cardboardswap(this)">
+ 	
+ 	</div> 
 
-<a href = "journal.html">
+	
+	<script>
+		function cardboardswap(element) {
+			element.id="cardboard2";
+		}
+	</script>
 
-	<div id = "cat">
+	<p>
+		PROJECTS PAGE
+	</p>
+
+	<a href = "journal.html">
+
+		<div id = "cat">
 		
-	</div>
+		</div>
 
-</a>
-
+	</a>
 
 </body>
 </html>

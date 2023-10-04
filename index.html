@@ -7,10 +7,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 
 	<style type="text/css">
+
 		#cardboard{
 			width:200px;
 			height: 150px;
-			background-image:url(cardboard.gif);
+			background-image:url(closed.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+	/*	#cardboard:hover{
+			
+			background-image:url(opening.gif);
 			background-size: contain;
 			background-repeat: no-repeat;
 		}
@@ -18,10 +26,10 @@
 		#cardboard2{
 			width:200px;
 			height: 150px;
-			background-image:url(cardboardframimimation.gif);
+			background-image:url(cardboard.gif);
 			background-size: contain;
 			background-repeat: no-repeat;
-		}
+		}*/
 
 		#cat {
 			width: 200px;
@@ -48,9 +56,7 @@
 	</a>
 	<!-- </a> -->
 
- 	<div id = "cardboard"; onclick = "cardboardswap(this)">
- 	
- 	</div> 
+ 	<div id = "cardboard"></div> 
 
 	
 	<script>
@@ -71,5 +77,13 @@
 
 	</a>
 
+
+<script type="text/javascript">
+	
+	cardboard.addEventListener("click", function(){
+		console.log("hello?")
+		cardboard.style.backgroundImage="url(opening.gif)"
+		})
+</script>
 </body>
 </html>

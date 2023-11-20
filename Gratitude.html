@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <style type="text/css">
+
+  	div {
+  		width: 200px;
+  		height: 200px;
+  		background-size: contain;
+  		background-repeat: no-repeat;
+  		position: absolute;
+  		opacity: 0;
+  	}
+
+	#dad1{
+		background-image: url("IMG_0492.jpg");
+	}
+
+	#dad2 {
+		background-image: url("bloop.JPG");
+		top: 250px;
+	}
+
+	#dad3 {
+		background-image: url("bloop2.HEIC");
+		top: 500px;
+	}
+
+	#dad4 {
+		left: 250px;
+		background-image: url("image.png");
+	}
+
+	#dad5 {
+		left: 250px;
+		top: 250px;
+		background-image: url("brent.PNG");
+	}
+
+	#dad6 {
+		left: 250px;
+		top: 500px;
+		background-image: url("https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg");
+	}
+
+	#dad7 {
+		left: 500px;
+		background-image: url("hat.jpg");
+	}
+
+	#dad8 {
+		left: 500px;
+		top: 250px;
+		background-image: url("boat.JPG");
+	}
+
+	#dad9 {
+		left: 500px;
+		top: 500px;
+		background-image: url("eat.jpg");
+	}
+  </style>
+</head>
+
+<body>
+	<div id = "dad1">
+	</div>
+
+	<div id = "dad2">
+	</div>
+
+	<div id = "dad3">
+	</div>
+
+	<div id = "dad4">
+	</div>
+
+	<div id = "dad5">
+	</div>
+
+	<div id = "dad6">
+	</div>
+
+	<div id = "dad7">
+	</div>
+
+	<div id = "dad8">
+	</div>
+
+	<div id = "dad9">
+	</div>
+
+	<script type="text/javascript">
+		var numb = 1;
+		addEventListener ("click", function () {
+			console.log ("hi");
+			if (numb < 10){
+				document.getElementById ("dad" + numb).style.opacity = 1;
+				numb = numb + 1;
+				console.log (numb);
+			}
+		})
+	</script>
+
+</html>

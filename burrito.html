@@ -31,21 +31,30 @@
 	})
 	
 
-	document.addEventListener ("click", function () {
+
+	document.addEventListener("click", function (event) {
 		console.log(x);
 		if (x!=0) {
 		var baby = document.createElement("div");
 		document.body.appendChild(baby);
-		baby.style.height = "20px";
-		baby.style.width = "20px";
+		baby.style.height = "60px";
+		baby.style.width = "60px";
 		baby.style.backgroundImage = "url(" + x + ")";
 		baby.style.backgroundRepeat = "no-repeat";
 		baby.style.backgroundSize = "contain";
-		baby.
+		// console.log(event)
+		baby.style.left = event.clientX +"px"
+		baby.style.top = event.clientY +"px"
+		baby.style.position = "absolute"
+
+
+
 
 
 		}
 	})
+
+	// document.addEventListener 
 </script>
 </body>
 </html>

@@ -16,6 +16,39 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 		}
+
+		#chicken {
+			height: 100px;
+			width: 100px;
+			background-image: url("chicken.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#cheese {
+			height: 100px;
+			width: 100px;
+			background-image: url("cheese.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#rice {
+			height: 100px;
+			width: 100px;
+			background-image: url("ricey.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#guac {
+			height: 100px;
+			width: 100px;
+			background-image: url("guacy.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
 	</style>
 </head>
 <body>
@@ -23,22 +56,52 @@
 <div id = salsa>
 </div>
 
+<div id = chicken>
+</div>
+
+<div id = cheese>
+</div>
+
+<div id = rice>
+</div>
+
+<div id = guac>
+	</div>
+
 <script type="text/javascript">
 	var x = 0;
 	salsa.addEventListener ("click", function () {
 		x = "https://www.spendwithpennies.com/wp-content/uploads/2020/07/Restaurant-Style-Salsa-SpendWithPennies-6-500x500.jpg";
 		console.log(x);
 	})
-	
 
+	chicken.addEventListener ("click", function () {
+		x= "chicken.png";
+		console.log(x);
+	})
+
+	cheese.addEventListener ("click", function () {
+		x = "cheese.png";
+		console.log(x);
+	})
+	
+	rice.addEventListener ("click", function () {
+		x = "ricey.png";
+		console.log(x);
+	})
+
+	guac.addEventListener ("click", function () {
+		x = "guacy.png";
+		console.log(x);
+	})
 
 	document.addEventListener("click", function (event) {
 		console.log(x);
 		if (x!=0) {
 		var baby = document.createElement("div");
 		document.body.appendChild(baby);
-		baby.style.height = "60px";
-		baby.style.width = "60px";
+		baby.style.height = "100px";
+		baby.style.width = "100px";
 		baby.style.backgroundImage = "url(" + x + ")";
 		baby.style.backgroundRepeat = "no-repeat";
 		baby.style.backgroundSize = "contain";

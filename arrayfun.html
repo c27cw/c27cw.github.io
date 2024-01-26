@@ -2,19 +2,101 @@
 <html>
 <head>
 
+	<style type="text/css">
+	#won {
+		height: 100px;
+		width: 100px;
+		background-color: wheat;
+		position: absolute;
+		top: 100px;
+		left: 384.5px;
+	}
+	#too {
+		height: 100px;
+		width: 100px;
+		background-color: wheat;
+		position: absolute;
+		top: 100px;
+		left: 500px;
+	}
+	#thwee {
+		height: 100px;
+		width: 100px;
+		background-color: wheat;
+		position: absolute;
+		top: 100px;
+		left: 269px;
+	}
+	#greg {
+		position: absolute;
+		top: 60px;
+		left: 263px;
+	}
+
+	</style>
 </head>
 <body>
 
+	<div id = won>
+		<p> </p>
+	</div>
+
+	<div id = too>
+		<p></p>
+	</div>
+
+	<div id = thwee>
+		<p></p>
+	</div>
+
+	<p id = greg>
+		Click to spin the boxes, three of a kind and you WIN!
+	</p>
+
+	<p id = grog>
+		Win Counter
+	</p>
+
+	<p id = thing>
+		
+	</p>
+
 	<script type="text/javascript">
-		var array = ["evan", "EK", "evangeline", "Kimki", "Sheer-sheer", "shiraki", "shirakidoo", 
-"evster", "eeekay", "ekie"];
+
+		var dirt = 0;
+
+		var won = document.getElementById("won");
+
+		var thing = document.getElementById("thing");
+
+		won.style.fontSize = "100%"
+
+		var array = ["evan", "EK", "evangeline", "Kimki", "Sheer-sheer", "shiraki", "shirakidoo", "evster", "eeekay", "ekie"];
+
 		document.addEventListener ("click", function(event) {
 
 			var edwardo = Math.round(Math.random()*9);
+			var edwardoo = Math.round(Math.random()*9);
+			var edwardooo = Math.round(Math.random()*9);
 			console.log(edwardo);
 			console.log (array[edwardo]);
+			won.innerText = array[edwardo];
+			too.innerText = array[edwardoo];
+			thwee.innerText = array[edwardooo];
+	
+	if (edwardo == edwardoo && edwardoo == edwardooo) {
+		console.log ("dsfhlaksdj;lkfajn");
+		dirt = dirt + 1;
+		thing.innerText = dirt;
+	}
+
+
 	})
+
+	
 	</script>
 
+
+	
 </body>
 </html>

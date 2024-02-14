@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	#car {
+		height: 100px;
+		width: 100px;
+		background-color: thistle;
+		position: absolute;
+	}
+</style>
+</head>
+<body>
+
+
+<div id = car>
+
+</div>
+
+	<script type="text/javascript">
+
+		var x = 0;
+		var y = 0;
+
+
+		document.addEventListener("keydown", function(event) {
+			console.log(event)
+			if (event.key == "ArrowDown" || event.key == "s") {
+				y=y+10;
+			}
+			if (event.key == "ArrowUp" || event.key == "w") {
+				y=y-10;
+			}
+			if (event.key == "ArrowRight" || event.key == "d") {
+				x=x+10;
+			}
+			if (event.key == "ArrowLeft" || event.key == "a") {
+				x=x-10;
+			}
+			
+			
+
+			
+
+			
+
+
+
+			car.style.left = x + "px"
+			car.style.top = y + "px"
+		})
+
+
+	</script>
+
+
+</body>
+</html>

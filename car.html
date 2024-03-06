@@ -6,9 +6,25 @@
 	#car {
 		height: 100px;
 		width: 100px;
-		background-color: thistle;
+		background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0M2x6RVu8iUxT9CMZ9bYd1yahKYsxAkVtg&usqp=CAU");
 		position: absolute;
+		background-repeat: no-repeat;
+		background-size: contain;
 	}
+
+	#car2 {
+		height: 100px;
+		width: 100px;
+		background-image: url("mini.jpeg");
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: contain;
+		left: 80%;
+		top: 80%;
+		transition: 1s;
+	}
+
+
 </style>
 </head>
 <body>
@@ -18,32 +34,74 @@
 
 </div>
 
+<div id = car2>
+
+</div>
+
 	<script type="text/javascript">
 
 		var x = 0;
 		var y = 0;
+		var c2l = 500;
+		var c2t = 500;
+		var ben = 0;
+		console.log(ben);
+
+		function move () {
+				
+				var l = x - c2l;
+				var p = y - c2t;
+
+				
+				if (l <= 0) {
+					 c2l =  c2l - 100;
+				}
+
+				if (l >= 0) {
+					 c2l =  c2l + 100;
+				}
+
+				if (p <= 0) {
+					 c2t =  c2t - 100;
+				}
+
+				if (p >= 0) {
+					 c2t =  c2t + 100;	
+
+				if (!(car.right < car2.left &&  
+       car.left > car2.right ||  
+       car.bottom < car2.top &&  
+       car.top > car2.bottom)) {
+			  	var ben = 1;
+			  	console.log (ben);
+			  }
+
+			  else {
+			  	var ben = 0;
+			  }
+				}
 
 
 		document.addEventListener("keydown", function(event) {
 			console.log(event)
-			if (event.key == "ArrowDown" || event.key == "s") {
-				y=y+10;
+			console.log(ben);
+		
+			if ((event.key == "ArrowDown" || event.key == "s") && ben == 0) {
+				y=y+20;
 			}
-			if (event.key == "ArrowUp" || event.key == "w") {
-				y=y-10;
+			if ((event.key == "ArrowUp" || event.key == "w") && 0 == 0) {
+				y=y-20;
 			}
-			if (event.key == "ArrowRight" || event.key == "d") {
-				x=x+10;
+			if ((event.key == "ArrowRight" || event.key == "d") &&  0 == 0) {
+				x=x+20;
 			}
-			if (event.key == "ArrowLeft" || event.key == "a") {
-				x=x-10;
+			if ((event.key == "ArrowLeft" || event.key == "a") && 0 == 0) {
+				x=x-20;
 			}
-			
-			
+		 
 
 			
 
-			
 
 
 
@@ -52,6 +110,67 @@
 		})
 
 
+
+	// 		function move () {
+				
+	// 			var l = x - c2l;
+	// 			var p = y - c2t;
+
+				
+	// 			if (l <= 0) {
+	// 				 c2l =  c2l - 100;
+	// 			}
+
+	// 			if (l >= 0) {
+	// 				 c2l =  c2l + 100;
+	// 			}
+
+	// 			if (p <= 0) {
+	// 				 c2t =  c2t - 100;
+	// 			}
+
+	// 			if (p >= 0) {
+	// 				 c2t =  c2t + 100;	
+
+	// 			if (!(car.right < car2.left ||  
+       // car.left > car2.right ||  
+       // car.bottom < car2.top ||  
+       // car.top > car2.bottom)) {
+	// 		  	var ben = 1;
+	// 		  	console.log (ben);
+	// 		  }
+	// 			}
+			
+
+		
+
+
+
+				// var c2 = Math.random()*1000;
+				car2.style.left =  c2l + "px";
+				car2.style.top = c2t + "px";
+
+
+
+						 
+
+			}
+
+			setInterval(move, 1000);
+			
+
+			// for (var i=0; i<100; i=i+1) { function (){
+			// 	setTimeout(move, 1000)
+			// 	console.log ("hi");
+			// }
+			
+
+			
+
+			
+		
+
+			
 	</script>
 
 

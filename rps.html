@@ -1,0 +1,285 @@
+<html>
+
+<head>
+	<style type="text/css">
+		#rock {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpD8B9WF79GoQcVqx7TZeHxtuBJyDW2A2Ekw&s);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		#paper {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://media.officedepot.com/image/upload/f_auto,c_limit,w_1920,q_auto/v1594220481/coremedia/resource/blob/321598/8e380468eb20bc85c935665a218e5a98/2720-paper-buying-guide-887x618-brightness-data);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 10px;
+			top: 120px;
+			
+		}
+
+		#scissors {
+			height: 100px;
+			width: 100px;
+			background-image: url(data:image/png;base64,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);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 10px;
+			top: 240px;
+		}
+
+		#rockb {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpD8B9WF79GoQcVqx7TZeHxtuBJyDW2A2Ekw&s);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 10px;
+			left: 500px;
+			opacity: 0;
+		}
+
+		#paperb {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://media.officedepot.com/image/upload/f_auto,c_limit,w_1920,q_auto/v1594220481/coremedia/resource/blob/321598/8e380468eb20bc85c935665a218e5a98/2720-paper-buying-guide-887x618-brightness-data);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 120px;
+			left: 500px;
+			opacity: 0;
+			
+		}
+
+		#scissorsb {
+			height: 100px;
+			width: 100px;
+			background-image: url(data:image/png;base64,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);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 240px;
+			left: 500px;
+			opacity: 0;
+		}
+
+			#comrock {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpD8B9WF79GoQcVqx7TZeHxtuBJyDW2A2Ekw&s);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			
+		}
+
+		#compaper {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://media.officedepot.com/image/upload/f_auto,c_limit,w_1920,q_auto/v1594220481/coremedia/resource/blob/321598/8e380468eb20bc85c935665a218e5a98/2720-paper-buying-guide-887x618-brightness-data);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 10px;
+			top: 120px;
+		}
+
+		#comscissors {
+			height: 100px;
+			width: 100px;
+			background-image: url(data:image/png;base64,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);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 10px;
+			top: 240px;
+		}
+
+		#comrockb {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpD8B9WF79GoQcVqx7TZeHxtuBJyDW2A2Ekw&s);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 500px;
+			top: 10px;
+			opacity: 0;
+			
+		}
+
+		#compaperb {
+			height: 100px;
+			width: 100px;
+			background-image: url(https://media.officedepot.com/image/upload/f_auto,c_limit,w_1920,q_auto/v1594220481/coremedia/resource/blob/321598/8e380468eb20bc85c935665a218e5a98/2720-paper-buying-guide-887x618-brightness-data);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 500px;
+			top: 120px;
+			opacity: 0;
+		}
+
+		#comscissorsb {
+			height: 100px;
+			width: 100px;
+			background-image: url(data:image/png;base64,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);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 500px;
+			top: 240px;
+			opacity: 0;
+		}
+
+		#playAgain {
+			border-radius: 50%;
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 100px;
+			left: 666px;
+		}
+
+		#winTitle {
+			position: absolute;
+			bottom: 100px;
+			left: 666px;
+		}
+
+		#winCount {
+			position: absolute;
+			bottom: 80px;
+			left: 680px;
+
+		}
+
+
+	</style>
+	
+</head>
+
+<body>
+	<button id = "playAgain"> 
+		Play Again
+	</button>
+
+	<div id = "rock"></div>
+
+	<div id = "paper"></div>
+
+	<div id = "scissors"></div>
+
+	<div id = "comrock"></div>
+
+	<div id = "compaper"></div>
+
+	<div id = "comscissors"></div>
+
+	<div id = "rockb"></div>
+
+	<div id = "paperb"></div>
+
+	<div id = "scissorsb"></div>
+
+	<div id = "comrockb"></div>
+
+	<div id = "compaperb"></div>
+
+	<div id = "comscissorsb"></div>
+
+	<p id = "winTitle"> WIN COUNT</p>
+	<p id = "winCount"> 0 </p>
+
+
+	<script type="text/javascript">
+
+		var i = 0
+
+		function IceT (x) {
+			console.log(x);
+			var y = Math.round(Math.random()*2)+3
+			console.log(y);
+
+			if(x==0) {
+				document.getElementById("rockb").style.opacity = (1);
+			}
+			if(x==1) {
+				document.getElementById("paperb").style.opacity = (1);
+			}
+			if(x==2) {
+				document.getElementById("scissorsb").style.opacity = (1);
+			}
+			if(y==3) {
+				document.getElementById("comrockb").style.opacity = (1);
+			}
+			if(y==4) {
+				document.getElementById("compaperb").style.opacity = (1);
+			}
+			if(y==5) {
+				document.getElementById("comscissorsb").style.opacity = (1);
+			}
+
+			if ((y-x)%3 == 0) {
+				console.log("you tie");
+			}
+
+			if ((y-x)%3 == 1) {
+				console.log("you lose");
+			}
+
+			if ((y-x)%3 == 2) {
+				console.log("you win");
+				i = i + 1;
+				document.getElementById("winCount").innerText = i;
+			}
+
+
+		}
+
+		playAgain.addEventListener ("click", function() {
+			document.getElementById("rockb").style.opacity = (0);
+			document.getElementById("paperb").style.opacity = (0);
+			document.getElementById("scissorsb").style.opacity = (0);
+			document.getElementById("comrockb").style.opacity = (0);
+			document.getElementById("compaperb").style.opacity = (0);
+			document.getElementById("comscissorsb").style.opacity = (0);
+		})
+
+		rock.addEventListener ("click", function() {
+			IceT (0);
+		})
+
+		paper.addEventListener ("click", function() {
+			IceT (1);
+		})
+
+		scissors.addEventListener ("click", function() {
+			IceT (2);
+		})
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>
